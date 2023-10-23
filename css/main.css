@@ -1,0 +1,954 @@
+/* reset trang */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+section{
+    width: 100%;
+    /* vh thuoc tinh css dung de chiem toan bo chieu cao trinh duyet ti le voi kich thuoc cua so trinh duyet */
+    /* vh là một đơn vị đo lường đặc biệt trong CSS, 
+    nó đại diện cho một phần trăm của chiều cao của viewport. 
+    Viewport là khu vực hiển thị của trình duyệt web, nơi nội dung trang web được hiển thị.
+     100vh tương đương với toàn bộ chiều cao của viewport */
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    left: 0;
+    /* z-index lam cho thanh dieu huong nam len tren */
+    z-index: 1000;
+    box-shadow: 0 0 2px black;
+}
+/* chinh sua logo trang tru */
+section nav .logo img{
+    width: 100px;
+    margin: 20px 0px;
+    position: relative;
+    left: -220%;
+    cursor: pointer;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+section nav ul li a{
+    color: black;
+    text-decoration: none;
+   
+}
+
+
+section nav ul li a:hover{
+    color: yellowgreen
+}
+
+section nav .login a{
+    color:black;
+    text-decoration: none;
+    border: 4px solid #facc22;
+    border-radius: 20px;
+    padding: 7px 20px;
+    transition: 0.4s;
+}
+
+section nav .login a:hover{
+    background: yellowgreen;
+    color: white;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 180px;
+}
+
+section .main .main_text h1{
+    color: #000;
+    font-size: 50px;
+    position: relative;
+    top: -24px;
+    left: 4%;
+    line-height: 80px;
+}
+
+section .main .main_text h1 span{
+    color: #facc22;
+    font-family: polo;
+}
+
+section .main .main_text p{
+    color: #000;
+    width: 650px;
+    position: relative;
+    top: 20px;
+    left: 5%;
+    line-height: 28px;
+    text-align: justify;
+}
+
+
+section .main .main_text .btn{
+    color: #000;
+    text-decoration: none;
+    border: 4px solid #facc22;
+    padding: 10px 20px;
+    position: relative;
+    top: 40px;
+    left: 5%;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+section .main .main_text .btn:hover{
+    color: #fff;
+}
+
+section .main .main_text .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: yellowgreen;
+    z-index: -3;
+    transition: 0.3s;
+}
+
+section .main .main_text .btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+section .main .main_image img{
+    width: 600px;
+    border-radius: 8px;
+    
+}
+
+
+
+
+/*--About--*/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 10px 0 0 0;
+    background-image: url(../image/about_bg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .about_image img{
+    width: 750px;
+    border-radius: 8px;
+}
+
+.about .about_main .about_text h1{
+    font-size: 45px;
+    position: relative;
+    bottom: 40px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #facc22;
+    margin-right: 15px;
+}
+
+.about .about_main .about_text h3{
+    position: relative;
+    bottom: 10px;
+    font-size: 25px;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    line-height: 23px;
+    margin-top: 20px;
+}
+
+.about .about_main .about_text .about_services{
+    margin-top: 20px;
+    /* thuoc tinh css xay dung kieu luoi */
+    display: grid;
+    /* cach phan chia cot co chieu cao tuong doi trong luoi */
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.about .about_main .about_text .about_services .s_1{
+    display: flex;
+    align-items: center;
+    width: 180px;
+    background: #ececec;
+    padding: 10px;
+    border: 4px solid #facc22;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+
+
+.about .about_main .about_text .about_services .s_1 a{
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+
+
+.about .about_main .about_text .about_btn{
+    position: relative;
+    top: 35px;
+    padding: 10px 20px;
+    border: 4px solid #facc22;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #000;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover{
+    color: #fff;
+}
+
+.about .about_main .about_text .about_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    background: #facc22;
+    transition: 0.3s;
+}
+
+.about .about_main .about_text .about_btn:hover::before{
+    top: unset;
+    width: 100%;
+    bottom: 0;
+}
+
+
+
+
+
+/*Menu*/
+
+.menu{
+    width: 100%;
+    height: 100vh;
+    padding: 75px 0;
+}
+
+.menu h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: #000;
+}
+
+.menu h1 span{
+    color: #facc22;
+    margin-left: 15px;
+}
+
+.menu .menu_box{
+    width: 95%;
+    margin: 45px auto 0 auto;
+    display: grid;
+    grid-gap: 30px 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.menu .menu_box .menu_card{
+    background-image: url(../image/anhmenucard.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+    width: 450px;
+    height: 575px;
+    text-align: center;
+    cursor: pointer;
+    padding: 20px 0;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    border-radius: 12 px;
+}
+
+.menu .menu_box .menu_card .menu_img{
+    margin: 0 auto;
+    width: 420px;
+    height: 300px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.7);
+   border-radius: 8px;
+}
+
+.menu .menu_box .menu_card .menu_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.menu .menu_box .menu_card .menu_text h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.menu .menu_box .menu_card .menu_text p{
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin: 0 auto;
+    width: 400px;
+    text-align: justify;
+    font-weight: 300;
+}
+
+
+
+.menu .menu_box .menu_card .menu_text .price{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 8px 0;
+   margin-left: 160px;
+}
+
+.menu .menu_box .menu_card .menu_text .price sub{
+    margin-left: 5px;
+    color: #6d6a6a;
+    font-size: 13px;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn{
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 4px solid #facc22;
+    border-radius: 16px;
+    position: relative;
+    top: 40px;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn:hover{
+    color: #fff;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #facc22;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_text .menu_btn:hover::before{
+    top: unset;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+/*Banner*/
+
+.banner{
+    width: 100%;
+    height: 50vh;
+    margin: 120px 0;
+    background-image: url(../image/banner.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+   
+}
+
+.banner h1{
+    font-family: P22Grenville;
+    color: yellowgreen;
+    font-size: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 24px;
+}
+
+.banner .banner_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    margin: 0 auto;
+}
+.banner .banner_center h2{
+    font-size: 60px;
+    margin-right: 24px;
+    font-family: Norwester;
+    color: #fff;
+}
+
+.banner .banner_center h2 span{
+    margin-left: 50px;
+    font-size: 30px;
+    position: relative;
+    bottom: 15px;
+    top: 8px;
+    font-family: Norwester;
+}
+
+.banner .banner_btn{
+    color: #fff;
+    border: 4px solid #facc22;
+    border-radius:12px ;
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+    top: 10%;
+    left: 46%;
+    z-index: 4;
+}
+
+
+
+.banner .banner_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #facc22;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.banner .banner_btn:hover::before{
+    width: 100%;
+    top: unset;
+    bottom: 0;
+}
+
+
+
+
+/*Gallery*/
+
+.gallery{
+    width: 100%;
+    padding: 35px 0 50px 0;
+}
+
+.gallery h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.gallery h1 span{
+    color: #facc22;
+    margin-left: 15px;
+}
+
+.gallery .gallery_box{
+    width: 95%;
+    margin: 50px auto 0 auto;
+    display: grid;
+/* được sử dụng để xác định cách cột của một grid layout sẽ được tạo ra.
+ Trong trường hợp grid-template-columns: 1fr 1fr 1fr;,
+ nó đang được sử dụng để xác định rằng grid sẽ có 3 cột bằng nhau. */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.gallery .gallery_box .gallery_image{
+    width: 470px;
+    height: 350px;
+    margin: 0 auto;
+    border-radius: 8px;
+    /* được sử dụng để ẩn bất kỳ nội dung nào vượt 
+    ra ngoài khu vực hiển thị của một phần tử. */
+    overflow: hidden;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.gallery .gallery_box .gallery_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery .gallery_box .gallery_image:hover img{
+    /* giup thay doi ti le kich thuoc khi ta bam vao anh */
+    transform: scale(1.1);
+}
+
+
+
+/*Offer*/
+
+.offer{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.offer >h1{
+   text-align: center;
+   font-size: 40px;
+   padding: 40px 0;
+   
+}
+.offer >h1 >span{
+    color: #facc22;
+
+}
+
+
+.offer .offer_box{
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 15px;
+    margin: 0 auto;
+}
+
+.offer .offer_box .offer_card_1{
+    width: 720px;
+    height: 470px;
+}
+
+.offer .offer_box .offer_card_1 .offer_img{
+    width: 720px;
+    height: 470px;
+}
+
+.offer .offer_box .offer_card_1 .offer_img img{
+    width: 100%;
+    height: 100%;
+    /* làm cho hình ảnh tự động thay đổi kích thước để lấp đầy 
+    Điều này có nghĩa rằng hình ảnh sẽ được hiển thị
+     một cách đầy đủ mà không bị bất kỳ phần nào bị cắt bỏ. */
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag{
+    position: relative;
+    bottom: 400px;
+    color: #fff;
+    padding: 0 35px;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag h2{
+    font-size: 40px;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag h1{
+    font-family: QuillScript;
+    font-size: 60px;
+    color: #facc22;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag p{
+    margin-top: 30px;
+    width: 200px;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag .offer_btn{
+    color: #fff;
+    border: 5px solid #facc22;
+    border-radius: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    /* là một thuộc tính CSS được sử dụng để xác định thứ tự hiển thị của các phần tử trên một trang web, 
+    đặc biệt là trong trường hợp các phần tử chồng lên nhau (overlapping elements). 
+    Giá trị của z-index quyết định phần tử nào 
+    nằm trên hoặc dưới phần tử khác. */
+    z-index: 2;
+    transition: 0.4s;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag .offer_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #facc22;
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.offer .offer_box .offer_card_1 .offer_tag .offer_btn:hover::before{
+    width: 100%;
+}
+
+
+
+.offer .offer_box .offer_card_2{
+    width: 720px;
+    height: 470px;
+}
+
+.offer .offer_box .offer_card_2 .offer_img{
+    width: 720px;
+    height: 470px;
+}
+
+.offer .offer_box .offer_card_2 .offer_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+
+}
+
+.offer .offer_box .offer_card_2 .offer_tag{
+    position: relative;
+    bottom: 400px;
+    color: #fff;
+    padding: 0 35px;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag h2{
+    font-size: 45px;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag h1{
+    font-family: QuillScript;
+    font-size: 60px;
+    color: #facc22;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag p{
+    margin-top: 30px;
+    width: 200px;
+    text-align: justify;
+    line-height: 24px;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag .offer_btn{
+    color: #fff;
+    border: 5px solid #facc22;
+    border-radius: 16px;
+    padding: 10px 20px;
+    text-decoration: none;
+    position: relative;
+    top: 41px;
+    z-index: 2;
+    transition: 0.3s;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag .offer_btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #facc22;
+    width: 0;
+    height: 100%;
+    transition: 0.3s;
+    z-index: -1;
+}
+
+.offer .offer_box .offer_card_2 .offer_tag .offer_btn:hover::before{
+    width: 100%;
+}
+
+/*Team*/
+
+.team{
+    width: 100%;
+    height: 77vh;
+    padding: 10px 0;
+}
+
+.team h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    padding: 28px 0;
+  
+}
+
+.team h1 span{
+    color: #facc22;
+    margin-left: 15px;
+}
+
+
+
+.team .team_box{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    bottom: 60px;
+    top: 24px;
+    padding: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.team .team_box .team_card{
+    width: 350px;
+    height: 464px;
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 16px;
+    margin: 0 auto;
+    z-index: 5;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.4);
+}
+
+.team .team_box .team_card .team_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team .team_box .team_card .team_img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 60%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 0 8px rgba(0,0,0,0.4);
+}
+
+.team .team_box .team_card .team_tag h2{
+    margin: 12px 0;
+}
+
+.team .team_box .team_card .team_tag p.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+
+
+/*Blog*/
+
+.blog{
+    width: 100%;
+    height: auto;
+    padding: 120px 0;
+}
+
+.blog h1{
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 44px;
+}
+
+.blog h1 span{
+    color: #facc22;
+    margin-left: 15px;
+}
+
+.blog .blog_box{
+    width: 95%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.blog .blog_box .blog_card{
+    margin: 0 auto;
+    width: 450px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.blog .blog_box .blog_card .blog_img{
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.blog .blog_box .blog_card .blog_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.blog .blog_box .blog_card .blog_tag .blog_date{
+    width: 100%;
+    color: #facc22;
+    padding: 15px 0 0 20px;
+    font-size: 20px;
+}
+
+
+
+.blog .blog_box .blog_card .blog_tag .blog_heading{
+    padding: 10px 20px 10px 20px;
+    font-size: 25px;
+}
+
+.blog .blog_box .blog_card .blog_tag .blog_text{
+    padding: 0 20px 10px 20px;
+    text-align: justify;
+    line-height: 21px;
+}
+
+.blog .blog_box .blog_card .blog_tag hr{
+    width: 95%;
+    margin: 0 auto;
+    height: 4px;
+    border: 0;
+    background: #facc22;
+    border-radius: 5px;
+}
+
+.blog .blog_box .blog_card .blog_tag .view_and_like{
+    padding: 10px 20px 25px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog .blog_box .blog_card .blog_tag .view_and_like .view{
+    display: flex;
+    align-items: center;
+}
+
+.blog .blog_box .blog_card .blog_tag .view_and_like .view p{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.blog .blog_box .blog_card .blog_tag .view_and_like .like{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+/*Footer*/
+
+footer{
+    margin-top: 45px;
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #ADD8E6;
+    border-radius: 16px;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+    
+}
+footer .footer_main .footer_tag i{
+    margin: 0 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #facc22;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+}
+
+footer .end span{
+    color:red;
+    margin-left: 10px;
+}
+footer .end span:hover{
+   color: #facc22;
+}
+footer .end i{
+   margin-left: 12px;
+   font-size: 20px;
+}
+
+
+
+
+
+
+
